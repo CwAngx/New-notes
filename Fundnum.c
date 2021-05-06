@@ -1,7 +1,9 @@
-//ÑîÊÏ¾ØÕó²éÕÒÔªËØ
+//æ¨æ°çŸ©é˜µæŸ¥æ‰¾å…ƒç´ 
 #include<stdio.h>
 int Fundnum(int arr[3][3], int k, int* px, int* py)
 {
+	assert(px != NULL);
+	assert(py != NULL);//æ–­è¨€ï¼Œæ£€æŸ¥æŒ‡é’ˆæ˜¯å¦ä¸ºç©º
 	int x = 0;
 	int y = *py-1;
 	while (x <= *px && y >= 0)
@@ -26,17 +28,17 @@ int Fundnum(int arr[3][3], int k, int* px, int* py)
 int main()
 {
 	int arr[3][3] = { {1,2,3},{4,5,6},{7,8,9} };
-	int k = 8;//ÒªÑ°ÕÒµÄÔªËØ
+	int k = 8;//è¦å¯»æ‰¾çš„å…ƒç´ 
 	int x = 3;
 	int y = 3;
-	int r = Fundnum(arr,k,&x,&y);//´«Ö·£¬¿ÉÒÔÔÚº¯ÊıÄÚ²¿ĞŞ¸ÄÖµ£¬·½±ãºóĞø´òÓ¡×ø±ê
+	int r = Fundnum(arr,k,&x,&y);//ä¼ å€ï¼Œå¯ä»¥åœ¨å‡½æ•°å†…éƒ¨ä¿®æ”¹å€¼ï¼Œæ–¹ä¾¿åç»­æ‰“å°åæ ‡
 	if (r == 0)
 	{
-		printf("Ã»ÕÒµ½");
+		printf("æ²¡æ‰¾åˆ°");
 	}
 	else
 	{
-		printf("ÕÒµ½ÁË£¬×ø±êÊÇ%d %d\n",x,y);
+		printf("æ‰¾åˆ°äº†ï¼Œåæ ‡æ˜¯%d %d\n",x,y);
 	}
 	return 0;
 }
